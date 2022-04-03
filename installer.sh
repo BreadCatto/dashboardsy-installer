@@ -77,6 +77,9 @@ read -p "Enter The Server Slot Price for Shop Per 1 Slot: " slotprice
 echo "------------------------------"
 echo "-INSTALLING REQUIRED PACKAGES-"
 echo "------------------------------"
+
+cd
+
 sudo apt update
 sudo apt install -y git
 sudo apt install -y nginx
@@ -187,8 +190,9 @@ sed -i -e "s@<domain>@${dashurl}@g" /etc/nginx/conf.d/dashboardsy.conf
 systemctl restart nginx
 
 echo ""
-echo "------------------------------------------------------------------------"
-echo "-Dashboardsy Normal Installation Complete, Please configure config.json-"
-echo "-if you want to add more eggs, locations, or something else            -"
-echo "-then run "npm build" and "pm2 restart dashboardsy"                    -"
-echo "------------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------------------------------"
+echo "-Dashboardsy Normal Installation Complete, Please configure config.json                          -"
+echo "-if you want to add more eggs, locations, or something else                                      -"
+echo "-then run "npm build" and "pm2 restart dashboardsy"                                              -"
+echo "-Make Sure to change OAuth2 -> General -> Redirects to https://$dashurl/api/auth/callback/discord-"
+echo "--------------------------------------------------------------------------------------------------"
