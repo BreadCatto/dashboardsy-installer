@@ -5,6 +5,9 @@ Installs dashboardsy without pain.
 How to install?
 ```bash <(curl -s https://raw.githubusercontent.com/BreadCatto/dashboardsy-installer/main/installer.sh)```
 
+# Important
 This script is only for debian-based distributions of GNU/Linux.
 
-If you can't afford a paid domain name dont run a host kid.
+```
+Updates for this script is not guaranteed, so use it at your own risk
+```
