@@ -40,37 +40,21 @@ exit 1
 fi
 
 read -p "Enter the password for mariadb database [Note: Skipping this step may corrupt the installation]: " databasepassword
-echo ""
 read -p "Enter the url where Dashboardsy Should be installed [Note: Don't use http:// or https:// and domain should point to ip of this server]: " dashurl
 if [[ "$dashurl" == *".cf" || "$dashurl" == *".ml" || "$dashurl" == *".tk" || "$dashurl" == *".ga" || "$dashurl" == *".gq" ]]; then
         echo "get some money bitch"
         exit 1
 fi
-echo ""
 read -p "Enter the secret cookie password [32 chars min]: " cookiepassword
-echo ""
 read -p "Enter the Discord OAuth Client ID [https://discord.dev > Applicaton > OAuth2 > General > Client ID]: " clientid
-echo ""
 read -p "Enter the Discord OAuth Client Secret [https://discord.dev > Applicaton > OAuth2 > General > Client Secret]: " clientsecret
-echo ""
 read -p "Enter the panel url [Note: Don't use http:// or https://]: " panelurl
-if [[ "$panelurl" == *".cf" || "$panelurl" == *".ml" || "$panelurl" == *".tk" || "$panelurl" == *".ga" || "$panelurl" == *".gq" ]]; then
-        echo "get some money bitch"
-        exit 1
-fi
-echo ""
 read -p "Enter the admin api key of panel [With all Read Write Permissions, or the dashboard may not work properly]: " panelapi
-echo ""
 read -p "Enter the Location Id of Server Creation: " locationid
-echo ""
 read -p "Enter the Location Name, will be displayed on the dashboard: " locationname
-echo ""
 read -p "Enter The CPU Price for Shop Per 100%: " cpuprice
-echo ""
 read -p "Enter The Ram Price for Shop Per 100MB: " ramprice
-echo ""
 read -p "Enter The DISK Price for Shop Per 100MB: " diskprice
-echo ""
 read -p "Enter The Server Slot Price for Shop Per 1 Slot: " slotprice
 
 
